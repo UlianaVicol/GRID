@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS NATIVE GRID EXEMPLE</title>
+    <style>
+        main{
+            border: 1px solid black;
+            height: 80vh;
+            width: 80vw;
+        }
+        main > *{
+            background-color: #BBB;
+            border: 2px solid green;
+            margin: 0;
+        }
+
+        /*CSS GRID*/
+        main{
+            display:grid;
+            grid-template-columns: 33% 10% 10% auto;
+            grid-template-rows: 2fr 0.5fr 0.5fr 1fr 1fr;
+        }
+        main h1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        main p:first-of-type{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main p:nth-of-type(2){
+            grid-row-start: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main p:nth-of-type(3){
+            grid-row-start: 5;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        main div{
+            background-color: orange;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>This is te CSS Grid</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio perferendis eius iure, debitis reiciendis quia sed, vero possimus, nam necessitatibus voluptate quo velit tempora eum. Ab exercitationem optio perspiciatis neque.
+            
+        </p>
+        <p>
+            Harum nihil quia incidunt placeat animi veritatis esse accusamus assumenda maxime repudiandae deserunt rem suscipit corrupti sequi saepe fugit eum, perferendis minima reprehenderit, debitis unde aliquam ab nemo necessitatibus! Assumenda.
+            
+        </p>
+        <p>
+            Provident eos consequuntur dolores architecto delectus sint dolorum autem beatae assumenda libero quasi necessitatibus, alias laboriosam deserunt excepturi iusto neque magnam unde accusantium minima doloremque repellendus in dolor commodi. Non.
+            
+        </p>
+        <div>
+            <a href="">BUY IT!</a>
+        </div>
+    </main>
+</body>
+</html>
